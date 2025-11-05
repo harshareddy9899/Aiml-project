@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wildlife Conservation — Anti-Poaching Project</title>
+  <meta name="description" content="Awareness and reporting tool for wildlife conservation and anti-poaching efforts." />
+  <style>
+    :root{--bg:#f6fafb;--card:#ffffff;--muted:#556;--accent:#0f766e;--accent2:#2dd4bf}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0;background:linear-gradient(180deg,#eef7f6 0%,#f6fbfb 100%);color:#082b28}
+    .wrap{max-width:1100px;margin:28px auto;padding:20px}
+    header{display:flex;align-items:center;gap:16px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    h1{margin:0;font-size:clamp(20px,3vw,28px)}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:20px}
+    .card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 8px 24px rgba(6,22,21,0.06)}
+
+    /* left column content */
+    .hero{display:flex;gap:14px;align-items:flex-start}
+    .hero .img{flex:0 0 220px;height:140px;border-radius:10px;background:linear-gradient(180deg,#dff6f3,#c9efe9);display:flex;align-items:center;justify-content:center;color:#04514a;font-weight:700}
+    .stats{display:flex;gap:12px;margin-top:12px}
+    .stat{flex:1;background:linear-gradient(180deg,#ffffff,#f7fffd);padding:12px;border-radius:10px;text-align:center}
+    .stat strong{display:block;font-size:18px}
+
+    h2{margin-top:0}
+    .threats{display:flex;flex-direction:column;gap:10px}
+    .threat{display:flex;gap:12px;align-items:flex-start}
+    .threat .icon{width:46px;height:46px;border-radius:8px;background:#e6fffb;display:flex;align-items:center;justify-content:center}
+
+    /* right column */
+    .sidebar .report-btn{display:block;width:100%;padding:12px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--accent),var(--accent2));color:white;font-weight:700;cursor:pointer}
+    .sidebar .small{color:var(--muted);font-size:13px}
+
+    form label{display:block;margin-top:10px;font-weight:600}
+    input[type=text], textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e7f7f6;margin-top:6px}
+    .row{display:flex;gap:8px}
+    .row > *{flex:1}
+    .btn-ghost{background:transparent;border:1px solid rgba(6,22,21,0.06);padding:10px;border-radius:8px;cursor:pointer}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:960px){.grid{grid-template-columns:1fr}.hero .img{display:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">WC</div>
+      <div>
+        <h1>Wildlife Conservation — Anti-Poaching</h1>
+        <p class="lead">A simple awareness and reporting page to help communities report poaching incidents and learn about conservation.</p>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <div class="hero">
+          <div>
+            <h2>Why it matters</h2>
+            <p>Poaching is a critical threat to biodiversity. Rapid reporting and community action reduce harm to threatened species. Use the tools here to learn, report suspicious activity, and support conservation efforts.</p>
+
+            <div class="stats" aria-hidden="true">
+              <div class="stat"><small>Protected Areas</small><strong id="stat-parks">120</strong></div>
+              <div class="stat"><small>Community Rangers</small><strong id="stat-rangers">1,350</strong></div>
+              <div class="stat"><small>Hotline Reports (this month)</small><strong id="stat-reports">42</strong></div>
+            </div>
+          </div>
+
+          <div class="img">Wildlife</div>
+        </div>
+
+        <hr style="margin:14px 0"/>
